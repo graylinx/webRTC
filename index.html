@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Sergio webRTC </title>
+
+</head>
+
+<body>
+
+<div id='mainDiv'>
+
+	<table width="100%">
+		<tr align="center">
+			<td align="right">
+				<video id="remoteVideo" autoplay style="width: 100%; height: auto;"></video>
+			</td>
+			<td align="left" valign="bottom">
+				<video id="localVideo" autoplay style="width: 50%; height: auto;" ></video>
+			</td>
+			<td align="center">
+				<textarea rows="4" cols="60" id="dataChannelReceive" disabled></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">
+				<textarea rows="1" cols="60" id="dataChannelSend" disabled
+			placeholder="This will be enabled once the data channel is up..."></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">
+				<button id="sendButton" disabled>Send</button>
+			</td>
+		</tr>		
+	</table>
+</div>
+
+<script src='/socket.io/socket.io.js'></script>
+<script src='js/lib/adapter.js'></script>
+<script src='js/completeNodeClientWithDataChannel.js'></script>
+
+</body>
+</html>
